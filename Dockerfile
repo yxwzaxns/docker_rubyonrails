@@ -20,6 +20,8 @@ RUN bash --login -c "gem install rails"
 
 RUN mkdir /app
 
+ADD . /app
+
 WORKDIR /app
 
 RUN bash --login -c "rails new . -B"
