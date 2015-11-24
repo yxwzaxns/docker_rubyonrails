@@ -22,7 +22,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-RUN rails new . -B
+RUN bash --login -c "rails new . -B"
 
 RUN echo "gem 'redis'" >> ./Gemfile
 
