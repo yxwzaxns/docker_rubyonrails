@@ -20,7 +20,7 @@ RUN bash --login -c "gem install rails"
 
 RUN mkdir /app
 
-ADD start.sh /app
+ADD ./ /app/
 
 WORKDIR /app
 
