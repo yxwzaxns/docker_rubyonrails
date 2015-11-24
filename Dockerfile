@@ -18,8 +18,6 @@ RUN bash --login -c "gem source --remove https://rubygems.org/"
 
 RUN bash --login -c "gem install rails"
 
-RUN mkdir /app
-
 ADD ./ /app/
 
 WORKDIR /app
