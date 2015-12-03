@@ -24,13 +24,12 @@ WORKDIR /app
 
 RUN bash --login -c "rails new . -B"
 
-RUN echo "gem 'redis'" >> ./Gemfile
+RUN echo "gem 'newrelic_rpm'" >> ./Gemfile
 
-RUN sed -i "1c source 'https://ruby.taobao.org'" ./Gemfile
 
 RUN bash --login -c "bundle install"
 
-RUN ln -s /app /var/vo
+RUN cp ./newrelic.yml  ./config/
 
 EXPOSE 3000
 # Default command
